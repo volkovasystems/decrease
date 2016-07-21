@@ -1,6 +1,6 @@
 "use strict";
 
-/*:
+/*;
 	@module-license:
 		The MIT License (MIT)
 		@mit-license
@@ -44,12 +44,6 @@
 	@module-documentation:
 
 	@end-module-documentation
-
-	@include:
-		{
-
-		}
-	@end-include
 */
 
 //: @support-module:
@@ -81,7 +75,7 @@ if( typeof window != "undefined" &&
 }
 
 var decrease = function decrease( array, method, value ){
-	/*:
+	/*;
 		@meta-configuration:
 			{
 				"array:required": "[*]",
