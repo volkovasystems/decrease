@@ -44,6 +44,13 @@
 	@module-documentation:
 
 	@end-module-documentation
+
+	@include:
+		{
+			"harden": "harden",
+			"raze": "raze"
+		}
+	@end-include
 */
 
 //: @support-module:
