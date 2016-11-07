@@ -42,20 +42,50 @@
 	@end-module-configuration
 
 	@module-documentation:
-
+		Reduce the array. This will always return an array.
 	@end-module-documentation
 
 	@include:
 		{
+			"doubt": "doubt",
 			"harden": "harden",
-			"raze": "raze"
+			"protype": "protype",
+			"raze": "raze",
+			"truly": "truly"
 		}
 	@end-include
 */
 
+if( typeof require == "function" ){
+	var doubt = require( "doubt" );
+	var harden = require( "harden" );
+	var protype = require( "protype" );
+	var raze = require( "raze" );
+	var truly = require( "truly" );
+}
+
+if( typeof window != "undefined" && !( "doubt" in window ) ){
+	throw new Error( "doubt is not defined" );
+}
+
+if( typeof window != "undefined" && !( "harden" in window ) ){
+	throw new Error( "harden is not defined" );
+}
+
+if( typeof window != "undefined" && !( "protype" in window ) ){
+	throw new Error( "protype is not defined" );
+}
+
+if( typeof window != "undefined" && !( "raze" in window ) ){
+	throw new Error( "raze is not defined" );
+}
+
+if( typeof window != "undefined" && !( "truly" in window ) ){
+	throw new Error( "truly is not defined" );
+}
+
 //: @support-module:
-	// Production steps of ECMA-262, Edition 5, 15.4.4.21
-	// Reference: http://es5.github.io/#x15.4.4.21
+	//: @reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 	Array.prototype.reduce||(Array.prototype.reduce=function(r){"use strict";
 	if(null==this)throw new TypeError("Array.prototype.reduce called on null or undefined");
 	if("function"!=typeof r)throw new TypeError(r+" is not a function");
@@ -64,24 +94,7 @@
 	e=t[o++]}for(;n>o;o++)o in t&&(e=r(e,t[o],o,t));return e});
 //: @end-support-module
 
-if( typeof window == "undefined" ){
-	var harden = require( "harden" );
-	var raze = require( "raze" );
-}
-
-if( typeof window != "undefined" &&
-	!( "harden" in window ) )
-{
-	throw new Error( "harden is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "raze" in window ) )
-{
-	throw new Error( "raze is not defined" );
-}
-
-var decrease = function decrease( array, method, value ){
+this.decrease = function decrease( array, method, value ){
 	/*;
 		@meta-configuration:
 			{
@@ -92,41 +105,39 @@ var decrease = function decrease( array, method, value ){
 		@end-meta-configuration
 	*/
 
-	var parameter = raze( arguments );
+	let parameter = raze( arguments );
 
-	array = Array.isArray( parameter[ 0 ] )? parameter[ 0 ] :
-		Array.isArray( this )? this : [ ];
+	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] : doubt( this ).ARRAY? this : [ ];
 
 	//: Clone the array so that we will not destroy it.
 	//: Deep level references will not be supported.
 	array = [ ].concat( array );
 
-	method = ( typeof parameter[ 0 ] == "function" )? parameter[ 0 ] :
-		( typeof parameter[ 1 ] == "function" )? parameter[ 1 ] :
+	method = protype( parameter[ 0 ], FUNCTION )? parameter[ 0 ] :
+
+		protype( parameter[ 1 ], FUNCTION )? parameter[ 1 ] :
+
 		function reduce( previous, current, index, array ){
 			if( index == ( array.length - 1 ) ){
 				array.pop( );
 
 				return array;
-
-			}else{
-				return current;
 			}
+
+			return current;
 		};
 
-	value = value || array[ 0 ];
+	value = truly( value )? value : array[ 0 ];
 
 	value = array.reduce( method, value );
 
-	if( !Array.isArray( value ) ){
-		value = [ value ];
-	}
+	if( !doubt( value ).ARRAY ){ value = [ value ]; }
 
 	harden( "decrease", decrease.bind( value ), value );
 
 	return value;
 };
 
-if( typeof module != "undefined" ){
-	module.exports = decrease;
+if( typeof module != "undefined" && typeof module.exports != "undefined" ){
+	module.exports = this.decrease;
 }
