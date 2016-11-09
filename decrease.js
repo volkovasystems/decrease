@@ -94,7 +94,7 @@ if( typeof window != "undefined" && !( "truly" in window ) ){
 	e=t[o++]}for(;n>o;o++)o in t&&(e=r(e,t[o],o,t));return e});
 //: @end-support-module
 
-this.decrease = function decrease( array, method, value ){
+var decrease = function decrease( array, method, value ){
 	/*;
 		@meta-configuration:
 			{
@@ -107,16 +107,15 @@ this.decrease = function decrease( array, method, value ){
 
 	let parameter = raze( arguments );
 
-	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] : doubt( this ).ARRAY? this : [ ];
+	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] :
+		doubt( this ).ARRAY? this : [ ];
 
 	//: Clone the array so that we will not destroy it.
 	//: Deep level references will not be supported.
 	array = [ ].concat( array );
 
 	method = protype( parameter[ 0 ], FUNCTION )? parameter[ 0 ] :
-
 		protype( parameter[ 1 ], FUNCTION )? parameter[ 1 ] :
-
 		function reduce( previous, current, index, array ){
 			if( index == ( array.length - 1 ) ){
 				array.pop( );
@@ -139,5 +138,5 @@ this.decrease = function decrease( array, method, value ){
 };
 
 if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = this.decrease;
+	module.exports = decrease;
 }
