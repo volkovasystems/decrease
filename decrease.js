@@ -56,33 +56,11 @@
 	@end-include
 */
 
-if( typeof require == "function" ){
-	var doubt = require( "doubt" );
-	var harden = require( "harden" );
-	var protype = require( "protype" );
-	var raze = require( "raze" );
-	var truly = require( "truly" );
-}
-
-if( typeof window != "undefined" && !( "doubt" in window ) ){
-	throw new Error( "doubt is not defined" );
-}
-
-if( typeof window != "undefined" && !( "harden" in window ) ){
-	throw new Error( "harden is not defined" );
-}
-
-if( typeof window != "undefined" && !( "protype" in window ) ){
-	throw new Error( "protype is not defined" );
-}
-
-if( typeof window != "undefined" && !( "raze" in window ) ){
-	throw new Error( "raze is not defined" );
-}
-
-if( typeof window != "undefined" && !( "truly" in window ) ){
-	throw new Error( "truly is not defined" );
-}
+const doubt = require( "doubt" );
+const harden = require( "harden" );
+const protype = require( "protype" );
+const raze = require( "raze" );
+const truly = require( "truly" );
 
 //: @support-module:
 	//: @reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
@@ -94,7 +72,7 @@ if( typeof window != "undefined" && !( "truly" in window ) ){
 	e=t[o++]}for(;n>o;o++)o in t&&(e=r(e,t[o],o,t));return e});
 //: @end-support-module
 
-var decrease = function decrease( array, method, value ){
+const decrease = function decrease( array, method, value ){
 	/*;
 		@meta-configuration:
 			{
@@ -110,8 +88,12 @@ var decrease = function decrease( array, method, value ){
 	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] :
 		doubt( this ).ARRAY? this : [ ];
 
-	//: Clone the array so that we will not destroy it.
-	//: Deep level references will not be supported.
+	/*;
+		@note:
+			Clone the array so that we will not destroy it.
+			Deep level references will not be supported.
+		@end-note
+	*/
 	array = [ ].concat( array );
 
 	method = protype( parameter[ 0 ], FUNCTION )? parameter[ 0 ] :
@@ -137,6 +119,4 @@ var decrease = function decrease( array, method, value ){
 	return value;
 };
 
-if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = decrease;
-}
+module.exports = decrease;
