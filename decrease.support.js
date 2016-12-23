@@ -59,65 +59,75 @@
 	@end-include
 */
 
-const doubt = require( "doubt" );
-const harden = require( "harden" );
-const protype = require( "protype" );
-const raze = require( "raze" );
-const truly = require( "truly" );
+var doubt = require("doubt");
+var harden = require("harden");
+var protype = require("protype");
+var raze = require("raze");
+var truly = require("truly");
 
 //: @support-module:
-	//: @reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-	Array.prototype.reduce||(Array.prototype.reduce=function(r){"use strict";
-	if(null==this)throw new TypeError("Array.prototype.reduce called on null or undefined");
-	if("function"!=typeof r)throw new TypeError(r+" is not a function");
-	var e,t=Object(this),n=t.length>>>0,o=0;if(2==arguments.length)e=arguments[1];
-	else{for(;n>o&&!(o in t);)o++;if(o>=n)throw new TypeError("Reduce of empty array with no initial value");
-	e=t[o++]}for(;n>o;o++)o in t&&(e=r(e,t[o],o,t));return e});
+//: @reference: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+Array.prototype.reduce || (Array.prototype.reduce = function (r) {
+	"use strict";
+
+	if (null == this) throw new TypeError("Array.prototype.reduce called on null or undefined");
+	if ("function" != typeof r) throw new TypeError(r + " is not a function");
+	var e,
+	    t = Object(this),
+	    n = t.length >>> 0,
+	    o = 0;if (2 == arguments.length) e = arguments[1];else {
+		for (; n > o && !(o in t);) {
+			o++;
+		}if (o >= n) throw new TypeError("Reduce of empty array with no initial value");
+		e = t[o++];
+	}for (; n > o; o++) {
+		o in t && (e = r(e, t[o], o, t));
+	}return e;
+});
 //: @end-support-module
 
-const decrease = function decrease( array, method, value ){
+var decrease = function decrease(array, method, value) {
 	/*;
-		@meta-configuration:
-			{
-				"array:required": "[*]",
-				"method:optional": "function",
-				"value:optional": "*"
-			}
-		@end-meta-configuration
-	*/
+ 	@meta-configuration:
+ 		{
+ 			"array:required": "[*]",
+ 			"method:optional": "function",
+ 			"value:optional": "*"
+ 		}
+ 	@end-meta-configuration
+ */
 
-	let parameter = raze( arguments );
+	var parameter = raze(arguments);
 
-	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] :
-		doubt( this ).ARRAY? this : [ ];
+	array = doubt(parameter[0]).ARRAY ? parameter[0] : doubt(this).ARRAY ? this : [];
 
 	/*;
-		@note:
-			Clone the array so that we will not destroy it.
-			Deep level references will not be supported.
-		@end-note
-	*/
-	array = [ ].concat( array );
+ 	@note:
+ 		Clone the array so that we will not destroy it.
+ 		Deep level references will not be supported.
+ 	@end-note
+ */
+	array = [].concat(array);
 
-	method = protype( parameter[ 0 ], FUNCTION )? parameter[ 0 ] :
-		protype( parameter[ 1 ], FUNCTION )? parameter[ 1 ] :
-		function reduce( previous, current, index, array ){
-			if( index == ( array.length - 1 ) ){
-				array.pop( );
+	method = protype(parameter[0], FUNCTION) ? parameter[0] : protype(parameter[1], FUNCTION) ? parameter[1] : function reduce(previous, current, index, array) {
+		if (index == array.length - 1) {
+			array.pop();
 
-				return array;
-			}
+			return array;
+		}
 
-			return current;
-		};
+		return current;
+	};
 
-	value = truly( value )? value : array[ 0 ];
+	value = truly(value) ? value : array[0];
 
-	value = array.reduce( method, value );
+	value = array.reduce(method, value);
 
-	if( !doubt( value ).ARRAY ){ value = [ value ]; }
+	if (!doubt(value).ARRAY) {
+		value = [value];
+	}
 
-	harden( "decrease", decrease.bind( value ), value );
+	harden("decrease", decrease.bind(value), value);
 
 	return value;
 };
