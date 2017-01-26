@@ -88,8 +88,8 @@ const decrease = function decrease( array, method, value ){
 
 	let parameter = raze( arguments );
 
-	array = doubt( parameter[ 0 ] ).ARRAY? parameter[ 0 ] :
-		doubt( this ).ARRAY? this : [ ];
+	array = doubt( parameter[ 0 ], ARRAY )? parameter[ 0 ] :
+		doubt( this, ARRAY )? this : [ ];
 
 	/*;
 		@note:
@@ -115,7 +115,7 @@ const decrease = function decrease( array, method, value ){
 
 	value = array.reduce( method, value );
 
-	if( !doubt( value ).ARRAY ){ value = [ value ]; }
+	if( !doubt( value, ARRAY ) ){ value = [ value ]; }
 
 	harden( "decrease", decrease.bind( value ), value );
 
