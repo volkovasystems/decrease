@@ -12,3 +12,5 @@ let result = decrease( array,
 	}, [ ] );
 
 console.log( "Result", result );
+
+console.log( decrease( ) );
