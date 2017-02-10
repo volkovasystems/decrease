@@ -1,10 +1,11 @@
 {
   "name": "decrease",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Reduce the array.",
   "main": "decrease.js",
   "support": "decrease.support.js",
   "deploy": "decrease.deploy.js",
+  "browser": "decrease.deploy.js",
   "scripts": {
     "build": "babel decrease.js -o decrease.support.js && webpack",
     "test": "mocha decrease-test.js"
@@ -29,11 +30,11 @@
   "homepage": "https://github.com/volkovasystems/decrease#readme",
   "dependencies": {
     "babel-runtime": "^6.22.0",
-    "doubt": "^0.10.0",
+    "doubt": "^0.14.0",
     "harden": "^0.14.0",
-    "protype": "^0.11.0",
-    "raze": "^0.12.0",
-    "truly": "^0.9.0"
+    "protype": "^0.15.0",
+    "raze": "^0.16.0",
+    "truly": "^0.11.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -41,6 +42,6 @@
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
     "source-map-loader": "^0.1.6",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.1"
   }
 }
