@@ -1,8 +1,9 @@
 {
   "name": "decrease",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Reduce the array.",
   "main": "decrease.deploy.js",
+  "support": "decrease.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
@@ -22,10 +23,10 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.14.0",
-    "harden": "^0.14.0",
-    "protype": "^0.15.0",
-    "raze": "^0.16.0",
-    "truly": "^0.11.0"
+    "doubt": "^0.15.0",
+    "harden": "^0.15.0",
+    "protype": "^0.16.0",
+    "raze": "^0.17.0",
+    "truly": "^0.12.0"
   }
 }
