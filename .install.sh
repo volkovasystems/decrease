@@ -20,4 +20,5 @@ harden \
 protype \
 raze \
 truly \
---save
+--save \
+--force-latest
