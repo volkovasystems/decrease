@@ -50,6 +50,7 @@
 
 	@include:
 		{
+			"arkount": "arkount",
 			"doubt": "doubt",
 			"harden": "harden",
 			"protype": "protype",
@@ -59,6 +60,7 @@
 	@end-include
 */
 
+const arkount = require( "arkount" );
 const doubt = require( "doubt" );
 const harden = require( "harden" );
 const protype = require( "protype" );
@@ -102,7 +104,7 @@ const decrease = function decrease( array, method, value ){
 	method = protype( parameter[ 0 ], FUNCTION )? parameter[ 0 ] :
 		protype( parameter[ 1 ], FUNCTION )? parameter[ 1 ] :
 		function reduce( previous, current, index, array ){
-			if( index == ( array.length - 1 ) ){
+			if( index == ( arkount( array ) - 1 ) ){
 				array.pop( );
 
 				return array;
