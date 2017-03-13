@@ -2,7 +2,7 @@ yarn add \
 babel-runtime \
 arkount \
 doubt \
-harden \
+falzy \
 protype \
 raze \
 truly \
@@ -18,7 +18,7 @@ webpack \
 bower install \
 arkount \
 doubt \
-harden \
+falzy \
 protype \
 raze \
 truly \
