@@ -1,6 +1,6 @@
 {
   "name": "decrease",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Reduce the array.",
   "main": "decrease.deploy.js",
   "support": "decrease.support.js",
@@ -23,7 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "arkount": "^0.7.0",
     "doubt": "^0.26.0",
     "falzy": "^0.19.0",
     "protype": "^0.21.0",

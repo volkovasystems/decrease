@@ -45,12 +45,13 @@
 	@end-module-configuration
 
 	@module-documentation:
-		Reduce the array. This will always return an array.
+		Reduce the array.
+
+		This will always return a new array filled with truthy values.
 	@end-module-documentation
 
 	@include:
 		{
-			"arkount": "arkount",
 			"doubt": "doubt",
 			"falzy": "falzy",
 			"protype": "protype",
@@ -60,7 +61,6 @@
 	@end-include
 */
 
-const arkount = require( "arkount" );
 const doubt = require( "doubt" );
 const falzy = require( "falzy" );
 const protype = require( "protype" );
@@ -86,8 +86,8 @@ const decrease = function decrease( array, method, value ){
 	}
 
 	if( falzy( method ) || !protype( method, FUNCTION ) ){
-		method = function reduce( previous, current, index, array ){
-			if( index == ( arkount( array ) - 1 ) ){
+		method = function reduce( accumulator, current, index, array ){
+			if( index == ( array.length - 1 ) ){
 				array.pop( );
 
 				return array;

@@ -1,6 +1,5 @@
 yarn add \
 babel-runtime \
-arkount \
 doubt \
 falzy \
 protype \
@@ -16,7 +15,6 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-arkount \
 doubt \
 falzy \
 protype \
