@@ -34,10 +34,11 @@
               			"file": "decrease.js",
               			"module": "decrease",
               			"author": "Richeve S. Bebedor",
-              			"contributors": [
-              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-              			],
               			"eMail": "richeve.bebedor@gmail.com",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+              				"Vinse Vinalon <vinsevinalon@gmail.com>"
+              			],
               			"repository": "https://github.com/volkovasystems/decrease.git",
               			"test": "decrease-test.js",
               			"global": true
@@ -54,7 +55,6 @@
               		{
               			"doubt": "doubt",
               			"falzy": "falzy",
-              			"protype": "protype",
               			"raze": "raze",
               			"truly": "truly"
               		}
@@ -63,7 +63,6 @@
 
 var doubt = require("doubt");
 var falzy = require("falzy");
-var protype = require("protype");
 var raze = require("raze");
 var truly = require("truly");
 
@@ -85,7 +84,7 @@ var decrease = function decrease(array, method, value) {
 		array = raze(array);
 	}
 
-	if (falzy(method) || !protype(method, FUNCTION)) {
+	if (falzy(method) || typeof method != "function") {
 		method = function reduce(accumulator, current, index, array) {
 			if (index == array.length - 1) {
 				array.pop();
