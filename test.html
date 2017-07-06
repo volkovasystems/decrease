@@ -1,8 +1,42 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./decrease.deploy.js">
-		</script>
+		<title>decrease unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./decrease.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "decrease unit test", function( assert ) {
+
+				assert.deepEqual( decrease( [ 1, 2, 3, 4, 5 ] ), [ 1, 2, 3, 4 ], "should removed element '5'" );
+				
+				assert.deepEqual( decrease( [ 1, 2, 3, null ] ), [ 1, 2, 3 ], "should have truthy values" );
+
+				assert.deepEqual( decrease( [ null, 1, 2, 3 ] ), [ 1, 2 ], "should have truthy values" );
+
+				assert.deepEqual( decrease( [ 1, 2, NaN, 3 ] ), [ 1, 2 ], "should have truthy values" );
+
+				let test = decrease( [ 1, 2, 3 ], function sum( previous, current ){
+					return previous + current;
+				} );
+				assert.deepEqual( test, [ 7 ], "should be deeply equal" );
+
+				let test2 = decrease( [ 1, 2, 3 ], function sum( previous, current ){
+					return previous + current;
+				}, 0 );
+				assert.deepEqual( test2, [ 6 ], "should be deeply equal" );
+
+			} );
+		</script>
+	</body>
 </html>

@@ -2,7 +2,6 @@ yarn add \
 babel-runtime \
 doubt \
 falzy \
-protype \
 raze \
 truly \
 --save && \
@@ -17,7 +16,6 @@ webpack \
 bower install \
 doubt \
 falzy \
-protype \
 raze \
 truly \
 --save \
