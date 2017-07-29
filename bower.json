@@ -1,6 +1,6 @@
 {
 	"name": "decrease",
-	"version": "0.27.0",
+	"version": "0.28.0",
 	"description": "Reduce the array.",
 	"main": "decrease.deploy.js",
 	"support": "decrease.support.js",
