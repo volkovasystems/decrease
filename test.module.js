@@ -170,7 +170,7 @@ describe( "decrease", ( ) => {
 //: @end-client
 
 //: @bridge:
-
+/*
 describe( "decrease", ( ) => {
 
 	describe( "`decrease( [ 1, 2, 3, 4, 5 ] )`", ( ) => {
@@ -221,5 +221,5 @@ describe( "decrease", ( ) => {
 	} );
 
 } );
-
+*/
 //: @end-bridge
