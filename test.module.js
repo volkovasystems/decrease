@@ -170,16 +170,26 @@ describe( "decrease", ( ) => {
 //: @end-client
 
 //: @bridge:
-/*
+
 describe( "decrease", ( ) => {
 
+	const testBridge = path.resolve(__dirname, "bridge.html");
+	const bridgeURL = "file://" + testBridge;
+	
 	describe( "`decrease( [ 1, 2, 3, 4, 5 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4 ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => decrease( [ 1, 2, 3, 4, 5 ] ) );
-			assert.deepEqual( result.value, [ 1, 2, 3, 4 ] );
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){ return decrease( [ 1, 2, 3, 4, 5 ] ) }
+
+			).value;
+
+			assert.deepEqual( result, [ 1, 2, 3, 4 ] );
 		} );
 	} );
 
+	/*
 	describe( "`decrease( [ null, 1, 2, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2 ]", ( ) => {
 			let result = browser.url( bridgeURL ).execute( ( ) => decrease( [ null, 1, 2, 3 ] ) );
@@ -219,7 +229,8 @@ describe( "decrease", ( ) => {
 		} );
 
 	} );
+	*/
 
 } );
-*/
+
 //: @end-bridge
