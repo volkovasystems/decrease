@@ -175,7 +175,7 @@ describe( "decrease", ( ) => {
 
 	const testBridge = path.resolve(__dirname, "bridge.html");
 	const bridgeURL = "file://" + testBridge;
-	
+
 	describe( "`decrease( [ 1, 2, 3, 4, 5 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4 ]", ( ) => {
 
@@ -189,47 +189,83 @@ describe( "decrease", ( ) => {
 		} );
 	} );
 
-	/*
 	describe( "`decrease( [ null, 1, 2, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2 ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => decrease( [ null, 1, 2, 3 ] ) );
-			assert.deepEqual( result.value, [ 1, 2 ] );
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					return decrease( [ null, 1, 2, 3 ] );
+				}
+
+			).value;
+
+			assert.deepEqual( result, [ 1, 2 ] );
+
 		} );
 	} );
 
 	describe( "`decrease( [ 1, 2, NaN, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2 ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => decrease( [ 1, 2, NaN, 3 ] ) );
-			assert.deepEqual( result.value, [ 1, 2 ] );
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					return decrease( [ 1, 2, NaN, 3 ] );
+				}
+
+			).value;
+
+			assert.deepEqual( result, [ 1, 2 ] );
+
 		} );
 	} );
 
 	describe( "`decrease with method parameter`", ( ) => {
-
-		let test = decrease( [ 1, 2, 3 ], function sum( previous, current ){
-			return previous + current;
-		} );
-
 		it( "should be equal to [ 7 ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => test );
-			assert.deepEqual( result.value, [ 7 ] );
-		} );
 
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = decrease( [ 1, 2, 3 ], function sum( previous, current ){
+						return previous + current;
+					} );
+
+					return test;
+				}
+
+			).value;
+
+			assert.deepEqual( result, [ 7 ] );
+
+		} );
 	} );
 
 	describe( "`decrease with method and value parameter`", ( ) => {
 
-		let test2 = decrease( [ 1, 2, 3 ], function sum( previous, current ){
-			return previous + current;
-		}, 0 );
-
 		it( "should be equal to [ 6 ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => test2 );
-			assert.deepEqual( result.value, [ 6 ] );
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					let test = decrease( [ 1, 2, 3 ], function sum( previous, current ){
+						return previous + current;
+					}, 0 );
+
+					return test;
+				}
+
+			).value;
+
+			assert.deepEqual( result, [ 6 ] );
+			
 		} );
 
 	} );
-	*/
 
 } );
 
