@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-07-30T10:25:55.276Z",
-	"end": "2017-07-30T10:26:28.276Z",
+	"start": "2017-08-22T09:58:16.437Z",
+	"end": "2017-08-22T09:58:59.450Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,101 +28,101 @@
 		{
 			"name": "decrease",
 			"duration": 0,
-			"start": "2017-07-30T10:26:27.831Z",
+			"start": "2017-08-22T09:58:59.019Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "decrease",
-			"duration": 264,
-			"start": "2017-07-30T10:26:27.832Z",
-			"end": "2017-07-30T10:26:28.096Z",
+			"duration": 254,
+			"start": "2017-08-22T09:58:59.020Z",
+			"end": "2017-08-22T09:58:59.274Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-07-30T10:26:27.837Z",
-					"end": "2017-07-30T10:26:27.837Z",
+					"start": "2017-08-22T09:58:59.021Z",
+					"end": "2017-08-22T09:58:59.021Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2, 3, 4 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:27.939Z",
-					"end": "2017-07-30T10:26:27.939Z",
+					"start": "2017-08-22T09:58:59.116Z",
+					"end": "2017-08-22T09:58:59.116Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2, 3, 4 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:27.947Z",
-					"end": "2017-07-30T10:26:27.947Z",
+					"start": "2017-08-22T09:58:59.117Z",
+					"end": "2017-08-22T09:58:59.117Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:27.987Z",
-					"end": "2017-07-30T10:26:27.987Z",
+					"start": "2017-08-22T09:58:59.158Z",
+					"end": "2017-08-22T09:58:59.158Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:27.988Z",
-					"end": "2017-07-30T10:26:27.988Z",
+					"start": "2017-08-22T09:58:59.158Z",
+					"end": "2017-08-22T09:58:59.158Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.024Z",
-					"end": "2017-07-30T10:26:28.024Z",
+					"start": "2017-08-22T09:58:59.196Z",
+					"end": "2017-08-22T09:58:59.196Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 1, 2 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.024Z",
-					"end": "2017-07-30T10:26:28.024Z",
-					"duration": 0,
+					"start": "2017-08-22T09:58:59.196Z",
+					"end": "2017-08-22T09:58:59.197Z",
+					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 7 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.058Z",
-					"end": "2017-07-30T10:26:28.058Z",
+					"start": "2017-08-22T09:58:59.234Z",
+					"end": "2017-08-22T09:58:59.234Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 7 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.058Z",
-					"end": "2017-07-30T10:26:28.058Z",
-					"duration": 0,
+					"start": "2017-08-22T09:58:59.234Z",
+					"end": "2017-08-22T09:58:59.235Z",
+					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 6 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.096Z",
-					"end": "2017-07-30T10:26:28.096Z",
+					"start": "2017-08-22T09:58:59.274Z",
+					"end": "2017-08-22T09:58:59.274Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "decrease",
 					"associatedTest": "should be equal to [ 6 ]"
 				},
 				{
-					"start": "2017-07-30T10:26:28.096Z",
-					"end": "2017-07-30T10:26:28.096Z",
-					"duration": 0,
+					"start": "2017-08-22T09:58:59.274Z",
+					"end": "2017-08-22T09:58:59.275Z",
+					"duration": 1,
 					"title": "\"after all\" hook",
 					"associatedSuite": "decrease"
 				}
@@ -130,15 +130,15 @@
 		},
 		{
 			"name": "`decrease( [ 1, 2, 3, 4, 5 ] )`",
-			"duration": 106,
-			"start": "2017-07-30T10:26:27.834Z",
-			"end": "2017-07-30T10:26:27.940Z",
+			"duration": 96,
+			"start": "2017-08-22T09:58:59.020Z",
+			"end": "2017-08-22T09:58:59.116Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 1, 2, 3, 4 ]",
-					"start": "2017-07-30T10:26:27.835Z",
-					"end": "2017-07-30T10:26:27.937Z",
-					"duration": 102,
+					"start": "2017-08-22T09:58:59.021Z",
+					"end": "2017-08-22T09:58:59.115Z",
+					"duration": 94,
 					"state": "pass"
 				}
 			],
@@ -146,15 +146,15 @@
 		},
 		{
 			"name": "`decrease( [ null, 1, 2, 3 ] )`",
-			"duration": 47,
-			"start": "2017-07-30T10:26:27.940Z",
-			"end": "2017-07-30T10:26:27.987Z",
+			"duration": 42,
+			"start": "2017-08-22T09:58:59.116Z",
+			"end": "2017-08-22T09:58:59.158Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 1, 2 ]",
-					"start": "2017-07-30T10:26:27.947Z",
-					"end": "2017-07-30T10:26:27.987Z",
-					"duration": 40,
+					"start": "2017-08-22T09:58:59.116Z",
+					"end": "2017-08-22T09:58:59.158Z",
+					"duration": 42,
 					"state": "pass"
 				}
 			],
@@ -162,15 +162,15 @@
 		},
 		{
 			"name": "`decrease( [ 1, 2, NaN, 3 ] )`",
-			"duration": 37,
-			"start": "2017-07-30T10:26:27.987Z",
-			"end": "2017-07-30T10:26:28.024Z",
+			"duration": 38,
+			"start": "2017-08-22T09:58:59.158Z",
+			"end": "2017-08-22T09:58:59.196Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 1, 2 ]",
-					"start": "2017-07-30T10:26:27.987Z",
-					"end": "2017-07-30T10:26:28.024Z",
-					"duration": 37,
+					"start": "2017-08-22T09:58:59.158Z",
+					"end": "2017-08-22T09:58:59.196Z",
+					"duration": 38,
 					"state": "pass"
 				}
 			],
@@ -178,15 +178,15 @@
 		},
 		{
 			"name": "`decrease with method parameter`",
-			"duration": 34,
-			"start": "2017-07-30T10:26:28.024Z",
-			"end": "2017-07-30T10:26:28.058Z",
+			"duration": 38,
+			"start": "2017-08-22T09:58:59.196Z",
+			"end": "2017-08-22T09:58:59.234Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 7 ]",
-					"start": "2017-07-30T10:26:28.024Z",
-					"end": "2017-07-30T10:26:28.058Z",
-					"duration": 34,
+					"start": "2017-08-22T09:58:59.196Z",
+					"end": "2017-08-22T09:58:59.233Z",
+					"duration": 37,
 					"state": "pass"
 				}
 			],
@@ -194,15 +194,15 @@
 		},
 		{
 			"name": "`decrease with method and value parameter`",
-			"duration": 38,
-			"start": "2017-07-30T10:26:28.058Z",
-			"end": "2017-07-30T10:26:28.096Z",
+			"duration": 40,
+			"start": "2017-08-22T09:58:59.234Z",
+			"end": "2017-08-22T09:58:59.274Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 6 ]",
-					"start": "2017-07-30T10:26:28.058Z",
-					"end": "2017-07-30T10:26:28.096Z",
-					"duration": 38,
+					"start": "2017-08-22T09:58:59.234Z",
+					"end": "2017-08-22T09:58:59.274Z",
+					"duration": 40,
 					"state": "pass"
 				}
 			],

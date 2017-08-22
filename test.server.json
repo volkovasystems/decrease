@@ -1,88 +1,88 @@
 {
-  "stats": {
-    "suites": 6,
-    "tests": 5,
-    "passes": 5,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-20T03:17:19.174Z",
-    "end": "2017-08-20T03:17:19.190Z",
-    "duration": 16
-  },
-  "tests": [
-    {
-      "title": "should be equal to [ 1, 2, 3, 4 ]",
-      "fullTitle": "decrease `decrease( [ 1, 2, 3, 4, 5 ] )` should be equal to [ 1, 2, 3, 4 ]",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 1, 2 ]",
-      "fullTitle": "decrease `decrease( [ null, 1, 2, 3 ] )` should be equal to [ 1, 2 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 1, 2 ]",
-      "fullTitle": "decrease `decrease( [ 1, 2, NaN, 3 ] )` should be equal to [ 1, 2 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 7 ]",
-      "fullTitle": "decrease `decrease with method parameter` should be equal to [ 7 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 6 ]",
-      "fullTitle": "decrease `decrease with method and value parameter` should be equal to [ 6 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should be equal to [ 1, 2, 3, 4 ]",
-      "fullTitle": "decrease `decrease( [ 1, 2, 3, 4, 5 ] )` should be equal to [ 1, 2, 3, 4 ]",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 1, 2 ]",
-      "fullTitle": "decrease `decrease( [ null, 1, 2, 3 ] )` should be equal to [ 1, 2 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 1, 2 ]",
-      "fullTitle": "decrease `decrease( [ 1, 2, NaN, 3 ] )` should be equal to [ 1, 2 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 7 ]",
-      "fullTitle": "decrease `decrease with method parameter` should be equal to [ 7 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to [ 6 ]",
-      "fullTitle": "decrease `decrease with method and value parameter` should be equal to [ 6 ]",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 6,
+		"tests": 5,
+		"passes": 5,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-22T09:58:15.324Z",
+		"end": "2017-08-22T09:58:15.330Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 1, 2, 3, 4 ]",
+			"fullTitle": "decrease `decrease( [ 1, 2, 3, 4, 5 ] )` should be equal to [ 1, 2, 3, 4 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2 ]",
+			"fullTitle": "decrease `decrease( [ null, 1, 2, 3 ] )` should be equal to [ 1, 2 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2 ]",
+			"fullTitle": "decrease `decrease( [ 1, 2, NaN, 3 ] )` should be equal to [ 1, 2 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 7 ]",
+			"fullTitle": "decrease `decrease with method parameter` should be equal to [ 7 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 6 ]",
+			"fullTitle": "decrease `decrease with method and value parameter` should be equal to [ 6 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 1, 2, 3, 4 ]",
+			"fullTitle": "decrease `decrease( [ 1, 2, 3, 4, 5 ] )` should be equal to [ 1, 2, 3, 4 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2 ]",
+			"fullTitle": "decrease `decrease( [ null, 1, 2, 3 ] )` should be equal to [ 1, 2 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2 ]",
+			"fullTitle": "decrease `decrease( [ 1, 2, NaN, 3 ] )` should be equal to [ 1, 2 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 7 ]",
+			"fullTitle": "decrease `decrease with method parameter` should be equal to [ 7 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 6 ]",
+			"fullTitle": "decrease `decrease with method and value parameter` should be equal to [ 6 ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
