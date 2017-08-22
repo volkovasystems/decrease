@@ -178,54 +178,54 @@ describe( "decrease", ( ) => {
 
 	describe( "`decrease( [ 1, 2, 3, 4, 5 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4 ]", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
-				function( ){ return decrease( [ 1, 2, 3, 4, 5 ] ) }
+				function( ){
+					return JSON.stringify( decrease( [ 1, 2, 3, 4, 5 ] ) )
+				}
 
 			).value;
-
-			assert.deepEqual( result, [ 1, 2, 3, 4 ] );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4 ] );
 		} );
 	} );
 
 	describe( "`decrease( [ null, 1, 2, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2 ]", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-
-					return decrease( [ null, 1, 2, 3 ] );
+					return JSON.stringify( decrease( [ null, 1, 2, 3 ] ) );
 				}
 
 			).value;
-
-			assert.deepEqual( result, [ 1, 2 ] );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2 ] );
 
 		} );
 	} );
 
 	describe( "`decrease( [ 1, 2, NaN, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2 ]", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-
-					return decrease( [ 1, 2, NaN, 3 ] );
+					return JSON.stringify( decrease( [ 1, 2, NaN, 3 ] ) );
 				}
 
 			).value;
-
-			assert.deepEqual( result, [ 1, 2 ] );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2 ] );
 
 		} );
 	} );
 
 	describe( "`decrease with method parameter`", ( ) => {
 		it( "should be equal to [ 7 ]", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -234,12 +234,12 @@ describe( "decrease", ( ) => {
 						return previous + current;
 					} );
 
-					return test;
+					return JSON.stringify( test );
 				}
 
 			).value;
-
-			assert.deepEqual( result, [ 7 ] );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 7 ] );
 
 		} );
 	} );
@@ -247,7 +247,7 @@ describe( "decrease", ( ) => {
 	describe( "`decrease with method and value parameter`", ( ) => {
 
 		it( "should be equal to [ 6 ]", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -256,13 +256,13 @@ describe( "decrease", ( ) => {
 						return previous + current;
 					}, 0 );
 
-					return test;
+					return JSON.stringify( test );
 				}
 
 			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 6 ] );
 
-			assert.deepEqual( result, [ 6 ] );
-			
 		} );
 
 	} );
